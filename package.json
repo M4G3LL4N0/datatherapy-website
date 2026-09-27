@@ -1,0 +1,9 @@
+{
+  "name": "datatherapy-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public website for DataTherapy, a calm-brief tool for scary information.",
+  "scripts": {
+    "build": "node -e \"console.log('static site')\""
+  }
+}

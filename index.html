@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DataTherapy — turn scary information into a calm brief</title>
+    <meta
+      name="description"
+      content="DataTherapy converts fear-triggering headlines and rumors into a structured brief: seriousness, relevance, urgency, certainty, interpretations, and grounded next steps. Not therapy. Not emergency support."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <a class="brand" href="/">DataTherapy</a>
+      <nav>
+        <a href="#brief">Brief</a>
+        <a href="#scores">Scores</a>
+        <a href="#request">Request</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Fear intelligence · clarity infrastructure</p>
+        <h1>Turn scary information into structured understanding.</h1>
+        <p class="lede">
+          DataTherapy takes a headline, a rumor, or a spiral and returns a calm
+          brief: how serious it looks, how personal it is, how urgent it is,
+          how certain it is, what is likely versus myth, and what a grounded
+          next step might be. It is not therapy, not medical advice, and not
+          emergency support.
+        </p>
+        <div class="actions">
+          <a class="btn primary" id="primary-cta" href="#brief">See a calm brief</a>
+          <a class="btn" href="#scores">Read the four scores</a>
+        </div>
+      </section>
+
+      <section id="brief">
+        <h2>A sample brief shape</h2>
+        <p>
+          Choose a sample input. The brief is generated on this page from a
+          local script. It does not call a model and does not claim live news
+          coverage.
+        </p>
+        <form id="brief-form">
+          <label>
+            Sample input
+            <select name="item">
+              <option value="rumor">A rumor that “everything is collapsing”</option>
+              <option value="policy">A policy headline with no date and no source</option>
+              <option value="personal">A story that feels personal but names no local fact</option>
+            </select>
+          </label>
+          <button type="submit">Open the brief</button>
+        </form>
+        <article id="brief-out" class="brief" hidden></article>
+        <p class="crisis">
+          If you are in immediate danger, contact emergency services or local
+          crisis resources. DataTherapy does not provide medical, legal, or
+          financial advice.
+        </p>
+      </section>
+
+      <section id="scores">
+        <h2>Four anchors</h2>
+        <ul>
+          <li><strong>Seriousness</strong> — how severe the issue appears from the language, not from the panic around it.</li>
+          <li><strong>Relevance</strong> — how directly it seems to touch the person reading.</li>
+          <li><strong>Urgency</strong> — whether something must happen now, or whether visibility is being mistaken for immediacy.</li>
+          <li><strong>Certainty</strong> — how confirmed or speculative the input looks, including rumor language.</li>
+        </ul>
+      </section>
+
+      <section id="request">
+        <h2>Request a walkthrough</h2>
+        <p>This page does not send email. Submit to open a mail draft on your machine.</p>
+        <form id="request-form" class="request">
+          <label>Name <input name="name" required autocomplete="name" /></label>
+          <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+          <label>What kind of spiral you want a brief for <textarea name="note" required rows="3"></textarea></label>
+          <button type="submit">Open a request draft</button>
+          <p class="status" id="request-status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>DataTherapy · calm briefs · not therapy · no invented outcomes</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
